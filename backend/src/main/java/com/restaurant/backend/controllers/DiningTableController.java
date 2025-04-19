@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DiningTableController {
-    private final DiningTableService diningTableService;
     public DiningTableController(DiningTableService diningTableService) {
-        this.diningTableService = diningTableService;
     }
 }

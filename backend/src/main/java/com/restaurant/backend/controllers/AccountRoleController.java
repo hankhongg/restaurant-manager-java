@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AccountRoleController {
-    private final AccountRoleService accountRoleService;
     public AccountRoleController(AccountRoleService accountRoleService) {
-        this.accountRoleService = accountRoleService;
     }
 }

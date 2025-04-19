@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FinancialHistoryController {
-    private final FinancialHistoryService financialHistoryService;
     public FinancialHistoryController(FinancialHistoryService financialHistoryService) {
-        this.financialHistoryService = financialHistoryService;
     }
 }

@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MapperConfig {
     @Bean
-    ModelMapper modelMapper(){
+    ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
         // add this so you can add nested objects
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
@@ -27,8 +27,8 @@ public class MapperConfig {
         });
 
         modelMapper.typeMap(Recipe.class, RecipeDto.class).addMappings(mapper -> {
-           mapper.map(src -> src.getIngre(), RecipeDto::setIngre);
-           mapper.map(src -> src.getItem(), RecipeDto::setItem);
+            mapper.map(src -> src.getIngre(), RecipeDto::setIngre);
+            mapper.map(src -> src.getItem(), RecipeDto::setItem);
         });
 
         modelMapper.typeMap(StockinDetailsDrinkOther.class, StockinDetailsDrinkOtherDto.class).addMappings(mapper -> {

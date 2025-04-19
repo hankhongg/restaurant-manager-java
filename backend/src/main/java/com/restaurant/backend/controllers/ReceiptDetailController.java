@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ReceiptDetailController {
-    private final ReceiptService receiptService;
     public ReceiptDetailController(ReceiptService receiptService) {
-        this.receiptService = receiptService;
     }
 }
