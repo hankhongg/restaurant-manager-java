@@ -10,7 +10,7 @@ CREATE TABLE EMPLOYEES (
                            EMP_ROLE VARCHAR(50),
                            EMP_SDATE TIMESTAMP,
                            EMP_WORKED_DAYS INT,
-                           EMP_SALARY NUMERIC(18,2) NOT NULL,
+                           EMP_SALARY NUMERIC(18,2) NOT NULL, // Luong co ban  
                            ISDELETED BOOLEAN NOT NULL DEFAULT FALSE
 );
 
@@ -125,8 +125,8 @@ CREATE TABLE FINANCIAL_HISTORY (
                                    DESCRIPTION VARCHAR(255),
                                    TYPE VARCHAR(10) CHECK (TYPE IN ('INCOME', 'EXPENSE', 'PROFIT')),
                                    AMOUNT NUMERIC(18,2) NOT NULL DEFAULT 0,
-                                   REFERENCE_ID INT NULL, -- ID liên kết với bảng RECEIPT hoặc STOCKIN nếu cần
-                                   REFERENCE_TYPE VARCHAR(20) NULL -- Loại liên kết ('RECEIPT', 'STOCKIN', 'OTHER')
+                                   REFERENCE_ID INT NULL, -- ID liên kết với bảng RECEIPT, STOCKIN, EMPLOYEE nếu cần
+                                   REFERENCE_TYPE VARCHAR(20) NULL -- Loại liên kết ('RECEIPT', 'STOCKIN', 'EMPLOYEE')
 );
 
 CREATE TABLE ACCOUNT_ROLE (
